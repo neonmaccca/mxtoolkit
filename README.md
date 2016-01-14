@@ -32,7 +32,6 @@ Usage Example
 		var mxToolkit = require("mxtoolkit");
     var apiKey = '#########################'
     var urlToQuery = 'google.com'
-
 		mxToolkit.dns(urlToQuery',apiKey,function(resp){
 		    console.log(resp);
 		});
@@ -43,7 +42,6 @@ For example to lookup txt record information the above function would look like 
 	var mxToolkit = require("mxtoolkit");
 	var apiKey = '#########################'
   var urlToQuery = 'google.com'
-
 	mxToolkit.txt(urlToQuery,apiKey,function(resp){
 	    console.log(resp);
 	});

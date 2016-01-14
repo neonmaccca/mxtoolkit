@@ -21,7 +21,7 @@ trace:         Perform a standard ICMP trace route
 dns:           Check your DNS Servers for possible problems  New!
 ```
 
-This module requires an api key from [https://mxtoolbox.com](https://mxtoolbox.com) otherwise you are severly rate limited.
+This module requires an api key from [https://mxtoolbox.com](https://mxtoolbox.com) otherwise you are severely rate limited.
 
 Installation
 

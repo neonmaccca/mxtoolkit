@@ -35,7 +35,7 @@ Usage Example
 var mxToolkit = require("mxtoolkit");
 var apiKey = '#########################'
 var urlToQuery = 'google.com'
-    mxToolkit.dns(urlToQuery',apiKey,function(resp){
+    mxToolkit.dns(urlToQuery,apiKey,function(resp){
         console.log(resp);
     });
 ```
@@ -45,7 +45,7 @@ Each Tool is called by its name as it appears in the list above For example to l
 ```
 var mxToolkit = require("mxtoolkit");
 var apiKey = '#########################'
-  var urlToQuery = 'google.com'
+var urlToQuery = 'google.com'
 mxToolkit.txt(urlToQuery,apiKey,function(resp){
     console.log(resp);
 });

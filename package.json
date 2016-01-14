@@ -14,7 +14,12 @@
     "url": "git+https://github.com/neonmaccca/mxtoolkit.git"
   },
   "keywords": [
-    "mxtoolkit"
+    "mxtoolkit",
+    "dns",
+    "mx",
+    "smtp",
+    "ping",
+    "blacklist"
   ],
   "author": "McCourt Cordingley <mccourt.cordingley@googlemail.com>",
   "license": "ISC",

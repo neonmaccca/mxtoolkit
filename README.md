@@ -32,18 +32,18 @@ Usage Example
 		var mxToolkit = require("mxtoolkit");
     var apiKey = '#########################'
     var urlToQuery = 'google.com'
-    var mxToolkit = require("mxtoolkit");
-	mxToolkit.dns(urlToQuery',apiKey,function(resp){
-	    console.log(resp);
-	});
+
+		mxToolkit.dns(urlToQuery',apiKey,function(resp){
+		    console.log(resp);
+		});
 
 Each Tool is called by its name as it appears in the list above
 For example to lookup txt record information the above function would look like this
 
 	var mxToolkit = require("mxtoolkit");
 	var apiKey = '#########################'
-    var urlToQuery = 'google.com'
-	var mxToolkit = require("mxtoolkit");
+  var urlToQuery = 'google.com'
+
 	mxToolkit.txt(urlToQuery,apiKey,function(resp){
 	    console.log(resp);
 	});

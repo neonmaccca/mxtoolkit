@@ -28,6 +28,7 @@ Installation
 	npm install mxtoolkit
 
 Usage Example
+
 		var mxToolkit = require("mxtoolkit");
     var apiKey = '#########################'
     var urlToQuery = 'google.com'
@@ -38,6 +39,7 @@ Usage Example
 
 Each Tool is called by its name as it appears in the list above
 For example to lookup txt record information the above function would look like this
+
 	var mxToolkit = require("mxtoolkit");
 	var apiKey = '#########################'
     var urlToQuery = 'google.com'

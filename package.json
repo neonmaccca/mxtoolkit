@@ -1,7 +1,7 @@
 {
   "name": "mxtoolkit",
   "readme": "README.md",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Node Api Wrapper for MXToolkit ",
   "main": "index.js",
   "scripts": {

@@ -5,20 +5,20 @@ With this module you can easily lookup information on MX record's, DNS, blacklis
 
 ```
 Available Tools
-blacklist: Check IP or host for reputation
-smtp:              Test mail server SMTP (port 25)
-mx:                  DNS MX records for domain
+blacklist:      Check IP or host for reputation
+smtp:           Test mail server SMTP (port 25)
+mx:             DNS MX records for domain
 a:              DNS A record IP address for host name
 spf:            Check SPF records on a domain
 txt:            Check TXT records on a domain
 ptr:            DNS PTR record for host name
-soa:           Get Start of Authority record for a domain
-tcp:           Verify an IP Address allows tcp connections
+soa:            Get Start of Authority record for a domain
+tcp:            Verify an IP Address allows tcp connections
 http:           Verify a URL allows http connections  
-https:         Verify a URL allows secure http connections  
+https:          Verify a URL allows secure http connections  
 ping:           Perform a standard ICMP ping
-trace:         Perform a standard ICMP trace route
-dns:           Check your DNS Servers for possible problems  New!
+trace:          Perform a standard ICMP trace route
+dns:            Check your DNS Servers for possible problems  New!
 ```
 
 This module requires an api key from [https://mxtoolbox.com](https://mxtoolbox.com) otherwise you are severely rate limited.

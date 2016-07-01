@@ -104,13 +104,14 @@ function makeRequest(url,apiKey,callback) {
       method: 'GET',
       json:true
    };
-    var res = '';
+    var res = {};
     request(options, function (error, response, body) {
         if (!error && response.statusCode == 200) {
-            res = JSON.stringify(body, null, 4);
+            res = body;
         }
         else {
-            res = JSON.stringify(body, null, 4);
+            res.error_code = response.statusCode;
+            res.body = body;
         }
         callback(res);
     });

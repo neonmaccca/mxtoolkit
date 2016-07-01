@@ -112,8 +112,6 @@ function makeRequest(url,apiKey,callback) {
         else {            
             res.error_code = response.statusCode;
             res.body = body;
-
-            console.log(res.error_code);
         }
         callback(res);
     });

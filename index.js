@@ -118,7 +118,7 @@ function makeRequest(url,apiKey,callback) {
 };
 
 function format_url(url) {
-  return url.replace(/^(http|https):\/\//g, '');
+  return url.replace(/^(http|https):\/\/|\/$/g, '');
 }
 
 

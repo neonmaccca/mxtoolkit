@@ -17,79 +17,79 @@ var apiRoutes = {
 };
 
 function mx(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.mx+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.mx+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function a(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.a+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.a+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function dns(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.dns+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.dns+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function spf(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.spf+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.spf+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function txt(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.txt+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.txt+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function soa(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.soa+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.soa+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function ptr(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.ptr+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.ptr+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 function blacklist(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.blacklist+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.blacklist+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 function smtp(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.smtp+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.smtp+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 function tcp(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.tcp+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.tcp+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 
 function http(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.http+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.http+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 function https(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.https+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.https+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 function ping(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.ping+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.ping+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
 function trace(url,apiKey,callback){
-  makeRequest(apiUrl+apiRoutes.trace+url,apiKey, function(resp){
+  makeRequest(apiUrl+apiRoutes.trace+format_url(url),apiKey, function(resp){
       callback(resp);
   });
 };
@@ -104,17 +104,22 @@ function makeRequest(url,apiKey,callback) {
       method: 'GET',
       json:true
    };
-    var res = '';
+    var res = {};
     request(options, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            res = JSON.stringify(body, null, 4);
+        if (!error && response.statusCode == 200) {            
+            res = body;
         }
-        else {
-            res = JSON.stringify(body, null, 4);
+        else {            
+            res.error_code = response.statusCode;
+            res.body = body;
         }
         callback(res);
     });
 };
+
+function format_url(url) {
+  return url.replace(/^(http|https):\/\/|\/$/g, '');
+}
 
 
 module.exports = {

@@ -13,7 +13,8 @@ var apiRoutes = {
   http:'http/',
   https:'https/',
   ping:'ping/',
-  trace:'trace/'
+  trace:'trace/',
+  ptr: 'ptr/
 };
 
 function mx(url,apiKey,callback){

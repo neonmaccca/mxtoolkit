@@ -7,6 +7,7 @@ var apiRoutes = {
   spf:'spf/',
   txt:'txt/',
   soa:'soa/',
+  ptr:'ptr/',
   blacklist:'blacklist/',
   smtp:'smtp/',
   tcp:'tcp/',
@@ -106,10 +107,10 @@ function makeRequest(url,apiKey,callback) {
    };
     var res = {};
     request(options, function (error, response, body) {
-        if (!error && response.statusCode == 200) {            
+        if (!error && response.statusCode == 200) {
             res = body;
         }
-        else {            
+        else {
             res.error_code = response.statusCode;
             res.body = body;
         }
@@ -129,6 +130,7 @@ module.exports = {
   spf:spf,
   txt:txt,
   soa:soa,
+  ptr:ptr,
   blacklist:blacklist,
   smtp:smtp,
   tcp:tcp,
